@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WorkWise
+    </title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</head>
+<body>
+    <!--Login & Register-->
+
+    <div class="container reveal">
+        <div class="forms-container">
+          <div class="signin-signup">
+            <form action=""  class="sign-in-form" onsubmit="return AdminSubmit();">
+              <h2 class="title">Admin Space</h2>
+              <div class="input-field">
+                <i class='bx bxs-user' ></i>
+                <input type="text" placeholder="Username" required>
+              </div>
+              <div class="input-field">
+                <i class='bx bxs-lock-alt' ></i>
+                <input type="password" placeholder="Password" required>
+              </div>
+              <button id="loginBtn" type="submit" class="lbtn" value="Login"> LogIn</button>
+              <p class="social-text">Or Sign in with social platforms</p>
+              <div class="social-media">
+                <a href="#" class="social-icon">
+                <i class='bx bxl-facebook' ></i>
+                </a>
+                <a href="#" class="social-icon">
+                <i class='bx bxl-twitter' ></i>
+                </a>
+                <a href="#" class="social-icon">
+                <i class='bx bxl-google' ></i>
+                </a>
+                <a href="#" class="social-icon">
+                <i class='bx bxl-linkedin' ></i>
+                </a>
+              </div>
+            </form>
+
+            
+
+            <form action="connect.php" method="POST" class="sign-up-form" id="redirect-form" >
+              <h2 class="title">Sign Up for Users</h2>
+              <div class="input-field">
+                <i class='bx bxs-user' ></i>
+                <input type="text" placeholder="Username" name="firstName" required>
+              </div>
+              <div class="input-field">
+                <i class='bx bxs-envelope' ></i>
+                <input type="email" placeholder="Email" name="email"required>
+              </div>
+              <div class="input-field">
+                <i class='bx bxs-lock-alt' ></i>
+                <input id="password" type="password" placeholder="Password" name="password" required>
+              </div>
+              <button id="loginBtn" type="submit" class="lbtn" value="Login">Sign Up</button>
+              <p class="social-text">Or Sign up with social platforms</p>
+              <div class="social-media">
+                <a href="#" class="social-icon">
+                <i class='bx bxl-facebook' ></i>
+                </a>
+                <a href="#" class="social-icon">
+                <i class='bx bxl-twitter' ></i>
+                </a>
+                <a href="#" class="social-icon">
+                    <i class='bx bxl-google' ></i>
+                </a>
+                <a href="#" class="social-icon">
+                    <i class='bx bxl-linkedin' ></i>
+                </a>
+              </div>
+            </form>
+          </div>
+        </div>
+  
+        <div class="panels-container">
+          <div class="panel left-panel">
+            <div class="content">
+              <h3>User Space</h3>
+              <p>
+                You can join WorkWise by clicking th button below ⬇ : 
+              </p><br>
+              <button class="lbtn transparent" id="sign-up-btn">
+                
+                Sign Up
+              </button>
+            </div>
+            <img src="../images/001.svg" class="image" alt="" />
+          </div>
+          <div class="panel right-panel">
+            <div class="content">
+              <h3>Admin Access
+              </h3>
+              <p>
+                If you are an admin click here to access the admin login page ⬇ :
+              </p>
+              <button class="lbtn transparent" id="sign-in-btn">
+                Admin Login
+              </button>
+            </div>
+            <img src="../images/002.svg" class="image" alt="" />
+          </div>
+        </div>
+      </div> 
+
+      <div id="logoo" class="logooo">
+        <img src="../Images/Logo WORKWISE.png" width="120" height="90" alt="">
+      </div>
+
+
+    
+    
+
+      <script src="./main.js"></script>
+</body>
+</html>

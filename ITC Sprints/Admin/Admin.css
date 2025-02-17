@@ -1,0 +1,215 @@
+:root {
+    --primary-color: #023047;
+    --secondary-color: #219ebc;
+    --third-color: #fdf0d5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-image: url(background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 30px;
+    border-radius: 10px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 55px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-size: 18px;
+    padding: 5px 22px;
+    border-radius: 7px;
+    transition: .3s;
+}
+
+.nav-links a:hover {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    box-shadow: 0px 4px 10px var(--primary-color);
+    transform: translateY(-2px);
+}
+
+.nav-links .active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Left Section (Classes + Document Upload) */
+.left-section {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Right Section (Assigned Tasks) */
+.right-section {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Assigned Tasks box adjustments */
+.tasks {
+    background: var(--primary-color);
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    min-height: 600px; /* Increased height for better structure */
+}
+
+/* Individual Task Styling */
+.task {
+    background: #405fc4;
+    color: white;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Add New Task Button */
+.add-btn {
+    background: white;
+    color: var(--primary-color);
+    padding: 10px;
+    border: none;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+/* Styling for Boxes */
+.section {
+    background: var(--primary-color);
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+}
+
+/* Headings */
+h2, h3 {
+    margin-bottom: 15px;
+    color: white;
+    font-weight: 600;
+}
+
+/* Classes Buttons */
+.class-btn {
+    width: 100%;
+    background: #405fc4;
+    color: white;
+    padding: 10px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #219ebc;
+}
+
+/* Add New Button */
+.add-btn {
+    background: white;
+    color: var(--primary-color);
+    padding: 10px;
+    border: none;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Upload Section */
+.upload-btn {
+    background: #405fc4;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #ffffff;
+    background-color: #219ebc;
+}
+
+.upload-btn button {
+    background: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Task Box Styling */
+.tasks {
+    background: var(--primary-color);
+}
+
+/* Individual Task */
+.task {
+    background: #405fc4;
+    color: white;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.task input {
+    margin-right: 10px;
+}
+
+.add-btn:hover{
+    background-color: var(--primary-color);
+    color: #ffffff;
+    transform: scale(1.1);
+}
+.add-btn {
+    transition: .3s;
+}
+
+.task{
+    background-color: #219ebc;
+}

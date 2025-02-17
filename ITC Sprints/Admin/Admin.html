@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="Admin.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <style>
+        .bingo{
+            
+          font-family: "Alexandria", serif;
+          font-optical-sizing: auto;
+          font-style: normal;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo"><img src="../Images/Logo WORKWISE.png" width="140" height="135" alt=""></div>
+        <ul class="nav-links">
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="./Booking.html">Booking</a></li>
+            <li><a href="./Performance.html">Performance</a></li>
+            <li><a href="./Account.html">Account</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="left-section">
+            <div class="section classes">
+                <h2 class="bingo">Classes</h2>
+                <button class="class-btn">Machine Learning</button>
+                <button class="class-btn">Machine Learning</button>
+                <button class="class-btn">Machine Learning</button>
+                <button class="class-btn">Machine Learning</button>
+                <button class="add-btn">ADD NEW COURSE</button>
+            </div>
+            
+            <div class="section upload">
+                <h2 class="bingo">Document Upload</h2>
+                <div class="upload-btn add-btn">Upload A Video <button>UPLOAD</button></div>
+                <div class="upload-btn add-btn">Upload A Playlist <button>UPLOAD</button></div>
+                <div class="upload-btn add-btn">Upload A PDF File <button>UPLOAD</button></div>
+            </div>
+        </div>
+
+        <div class="right-section">
+            <div class="section tasks">
+                <h2 class="bingo">Assigned Tasks</h2>
+                <h3>TEAM TASKS</h3>
+                <div class="task"><input type="checkbox" checked> Task 1 <span>Assigned to: User - Time Up</span></div>
+                <div class="task"><input type="checkbox" checked> Task 2 <span>Assigned to: User - Time Up</span></div>
+                <div class="task"><input type="checkbox" checked> Task 3 <span>Assigned to: User - 4 Days</span></div>
+                <div class="task"><input type="checkbox"checked> Task 4 <span>Assigned to: User - A Week</span></div>
+                <div class="task"><input type="checkbox"checked> Task 5 <span>Assigned to: User - 10 Days</span></div>
+                <button class="add-btn">ADD NEW TASK</button>
+
+                <h3>USER TASKS</h3>
+                <div class="task"><input type="checkbox" checked> Task 1 <span>Time Up</span></div>
+                <div class="task"><input type="checkbox" checked> Task 2 <span>Time Up</span></div>
+                <div class="task"><input type="checkbox"> Task 3 <span>4 Days</span></div>
+                <div class="task"><input type="checkbox"> Task 4 <span>A Week</span></div>
+                <div class="task"><input type="checkbox"> Task 5 <span>10 Days</span></div>
+                <button class="add-btn">ADD NEW TASK</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

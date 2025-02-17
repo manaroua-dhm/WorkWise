@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./Account.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="../Images/Logo WORKWISE.png " width="140" height="110" alt="">
+        </div>
+        <ul class="nav-links">
+            <li><a href="./User.html">Home</a></li>
+            <li><a href="./BookingUser.html">Booking</a></li>
+            <li><a href="./Performance.html">Performance</a></li>
+            <li><a href="#" class="active">Account</a></li>
+        </ul>
+    </nav>
+  <div class="flex justify-center p-10">
+    <div class="w-full max-w-4xll bg-white p-8 rounded-lg shadow-md">
+        <div class="flex items-center gap-4 mb-8 relative">
+    <!-- Profile Picture Container -->
+    <div class="relative w-16 h-16">
+        <div class="w-16 h-16 bg-gray-300 rounded-full overflow-hidden">
+            <img id="profile-image" src="./images/001.svg" alt="Profile Picture" class="w-full h-full object-cover">
+        </div>
+        <!-- Upload Button -->
+        <label for="Mon-Plus" class="absolute -top-2 -right-2 bg-blue-500 text-white text-xs px-2 py-1 rounded-full cursor-pointer hover:bg-blue-600">
+            +
+        </label>
+        <input type="file" id="Mon-Plus" class="hidden" accept="image/*">
+    </div>
+
+    <!-- User Info -->
+    <div>
+        <p class="text-xl font-bold">USERNAME</p>
+        <p class="text-sm text-gray-500">user/admin & Date joined</p>
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const profileImage = document.getElementById("profile-image");
+        const fileInput = document.getElementById("Mon-Plus");
+
+        // Load saved image from localStorage
+        const savedImage = localStorage.getItem("profileImage");
+        if (savedImage) {
+            profileImage.src = savedImage;
+        }
+
+        fileInput.addEventListener("change", function (event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    profileImage.src = e.target.result; // Set new image
+                    localStorage.setItem("profileImage", e.target.result); // Save image in localStorage
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+    });
+</script>
+
+        
+        <div class="space-y-4">
+            <div class="bg-gray-200 p-4 rounded-md cursor-pointer">
+                <p class="font-bold">Edit Profile</p>
+                <p class="text-sm text-gray-500">(Name, username, profile picture)</p>
+            </div>
+            <div class="bg-gray-200 p-4 rounded-md cursor-pointer">
+                <p class="font-bold">Contact Information</p>
+                <p class="text-sm text-gray-500">(Email address, phone number)</p>
+            </div>
+            <div class="bg-gray-200 p-4 rounded-md cursor-pointer">
+                <p class="font-bold">Date of Birth</p>
+                <p class="text-sm text-gray-500">(For age verification or personalized experiences)</p>
+            </div>
+            <div class="bg-gray-200 p-4 rounded-md cursor-pointer">
+                <p class="font-bold">Change Password</p>
+                <p class="text-sm text-gray-500">(Option to update the account password)</p>
+            </div>
+            <div class="bg-gray-200 p-4 rounded-md cursor-pointer">
+                <p class="font-bold">Two-Factor Authentication (2FA)</p>
+                <p class="text-sm text-gray-500">(Enable/disable 2FA for added security)</p>
+            </div>
+            <div class="bg-gray-200 p-4 rounded-md cursor-pointer">
+                <p class="font-bold">Privacy Settings</p>
+                <p class="text-sm text-gray-500">(Control who can see your profile)</p>
+            </div>
+            <div class="bg-gray-200 p-4 rounded-md cursor-pointer">
+                <p class="font-bold">Notification Preferences</p>
+                <p class="text-sm text-gray-500">(Customize what types of notifications you receive)</p>
+            </div>
+            <div class="bg-gray-200 p-4 rounded-md cursor-pointer">
+                <p class="font-bold">Language</p>
+                <p class="text-sm text-gray-500">(Change the app or website language)</p>
+            </div>
+            <div class="bg-gray-200 p-4 rounded-md cursor-pointer">
+                <p class="font-bold">Accessibility</p>
+                <p class="text-sm text-gray-500">(Adjust font size, contrast, or other accessibility features)</p>
+            </div>
+            <div class="bg-gray-200 p-4 rounded-md cursor-pointer">
+                <p class="font-bold">Clear Cache</p>
+                <p class="text-sm text-gray-500">(Remove temporary files or cached data)</p>
+            </div>
+            <div class="bg-gray-200 rounded-md font-bold p-4 cursor-pointer flex items-center justify-between">
+                <div>
+                    <p>Deactivate Account</p>
+                    <p class="text-sm text-gray-500">(Temporarily disable your account)</p>
+                </div>
+                <button class="bg-gray-700 text-white px-4 py-2 rounded-md hover:bg-black btnn">Deactivate</button>
+            </div>
+            <div class="text-red-500 bg-gray-200 rounded-md font-bold p-4 cursor-pointer flex items-center justify-between">
+                <div>
+                    <p>Delete Account</p>
+                    <p class="text-sm text-gray-500">(Permanently remove your account)</p>
+                </div>
+                <button class="bg-red-600 text-white px-4 py-2 rounded-md hover:bg-red-600 btnn">Delete</button>
+            </div>
+            <div class="bg-gray-200 p-4 rounded-md cursor-pointer">
+                <p class="font-bold">Help Center</p>
+            </div>
+            <div class="bg-gray-200 p-4 rounded-md cursor-pointer">
+                <p class="font-bold">Terms of Service</p>
+            </div>
+            <div class="text-red-500 bg-gray-200 rounded-md font-bold p-4 cursor-pointer flex items-center justify-between">
+                <div>
+                    <p>Logout</p>
+                    <p class="text-sm text-gray-500">(Logs you Out and redirects you to Sign Up for User and Sign In for Admins)</p>
+                </div>
+                <button class="bg-red-600 text-white px-4 py-2 rounded-md hover:bg-red-600 btnn">LogOut</button>
+            </div>
+        </div>
+    </div>
+  </div>
+</body>
+</html>
+
